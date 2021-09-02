@@ -167,7 +167,7 @@ header img {
 
 /* conteúdo */
 .content {
-    font-size: calc(8px + 2vw);
+    font-size: calc(12px + 0.4vw);
     font-weight: normal;
     text-align: center;
     color: rgb(133, 133, 133);
@@ -176,25 +176,14 @@ header img {
 
 
 /* blocos coloridos */
-#block-section {
-    margin-top: 5%;
-}
 .block {
     padding: 20px 20px;
-    background-image: url("../assets/target.png");
-    background-repeat: no-repeat;
-    background-origin: content-box;
     width: auto;
-    background-position: center left;
-    background-size: 49px;
     margin: 0 0 5% 0;
-    overflow: auto;
+    display: flex;
+    justify-content: space-around;
 }
-.block h2 {
-    font-size: calc(11px + 2vw);
-    font-weight: 600;
-}
-.inside-block {
+.block-text {
     width: 78%;
     height: auto;
     text-align: left;
@@ -202,12 +191,26 @@ header img {
     padding: 0;
     position: relative;
     float: right;
-    font-size: calc(8px + 1vw);
+}
+.block-img {
+    background-image: url("../assets/target.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 65px;
+    min-height: 65px;
+}
+.block-text, .container, .table-cell {
+    font-size: calc(12px + 0.15vw);
+}
+.block:nth-of-type(1) {
+    background-color: #0072c6;
+}
+.block:nth-of-type(2) {
+    background-color: #2c5898;
 }
 
 
 /* support, shield, notebook */
-
 .container {
     color: #737373;
     margin: 0 0 20px 0;
@@ -216,19 +219,13 @@ header img {
     align-items: center;
     width: auto;
     text-align: left;
-    font-size: calc(9px + 1vw);
     border-bottom: 3px solid #dedede;
     padding: 0;
-}
-.container h2 {
-    font-size: calc(10px + 1vw);
-    font-weight: 600;
 }
 .container:nth-child(3) {
     border-bottom: 0;
 }
 .icons {
-    margin: 0 auto 0 18px; /* para centralizar */
     background-origin: content-box;
     background-position: center;
     background-repeat: no-repeat;
@@ -237,21 +234,23 @@ header img {
     width: 70px;
     height: 70px;
     box-sizing: border-box;
-    background-size: 30px;
     position: relative;
     float: right;
 }
 .support {
     background-color: #7fba00;
     background-image: url('../assets/maos.png');
+    background-size: 80%;
 }
 .shield {
     background-color: #00a4ef;
     background-image: url('../assets/shield.png');
+    background-size: 70%;
 }
 .notebook {
     background-color: #ffb900;
     background-image: url('../assets/notebook.png');
+    background-size: 75%;
 }
 .first-child h2 {
     color: #7fba00;
@@ -262,20 +261,20 @@ header img {
 .third-child h2 {
     color: #ffb900;
 }
-.icons img {
-    margin-left: 10px;
-}
 .separator {
     display: none;
 }
 
 
 /* tabela */
+.table-cell h2 {
+    color: #F25022;
+    padding: 10px;
+}
 .table-cell {
     border: 3px solid #dedede;
     border-bottom: 0;
-    font-size: calc(8px + 1vw);
-    padding: 0 24px 30px 24px;
+    padding: 20px 24px 30px 24px;
     margin: 0;
 }
 .table-cell:nth-child(4) {
@@ -356,42 +355,18 @@ input:focus {
 
 /*  headers */
 h1 {
-    font-size: calc(10px + 4vw);
+    font-size: calc(12px + 2vw);
     color: #2772b7;
     text-align: center;
     font-weight: 600;
     padding: 10px;
 }
 h2 {
-    font-size: calc(12px + 2vw);
-    font-weight: 500;
+    font-size: calc(14px + 0.5vw);
+    font-weight: 600;
     padding: 0;
     margin: 0;
 }
-h3 {
-    font-size: calc(12px + 1vw);
-    font-weight: 600;
-    color: #F25022;
-    padding-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -399,14 +374,9 @@ h3 {
 /* layout desktop */
 
 @media only screen and (min-width: 893px) {
-    .content {
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .flex-container { /* div com propriedades flexbox */
+    .flex-container {
         display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
+        flex-flow: row nowrap;
         justify-content: space-around;
     }
     
@@ -450,21 +420,22 @@ h3 {
         font-size: 25px;
     }
     #button3 {
+        padding: 8px;
         font-size: 14px;
         font-weight: 700;
+    }
+    .green {
+        border: 2px solid #7FBA00;
+    }
+    .blue {
+        border: 2px solid #00a4ef;
+    }
+    .orange {
+        border: 2px solid #ffb900;
     }
     #button4 {
         padding: 12px 0 12px 0;
         font-size: 26px;
-    }
-
-
-    /* headers */
-    h1 {
-        font-size: 36px;
-    }
-    h2 {
-        font-size: 18px;
     }
 
 
@@ -501,37 +472,20 @@ h3 {
 
     /* seção dos blocos coloridos */
     .block {
-        padding: 20px 20px;
-        width: 45%;
+        width: 40%;
         margin: -1.5% 0;
-        background-image: url("../assets/target.png");
-        background-repeat: no-repeat;
-        background-origin: content-box;
-        background-size: 60px;
     }
-    .inside-block {
-        width: 80%;
-        text-align: left;
-        font-size: 14px;
-        color: white;
-        padding: 0;
-        position: relative;
-        float: right;
-    }
-
 
     /* seção dos ícones de support, shield e notebook */
     .container {
         width: 285px;
         text-align: center;
-        font-size: 14px;
     }
     .separator { /* esta classe é ocultada na versão mobile */
         border-bottom: 4px solid #dedede;
         width: 45px;
         height: 15px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 0 auto;
         display: block;
     }
     .container {
@@ -544,10 +498,6 @@ h3 {
         padding: 20px;
         height: 160px;
         width: 160px;
-        float: center;
-    }
-    .icons img {
-        height: 100px !important;
     }
 
 
@@ -555,7 +505,6 @@ h3 {
     .table-cell {
         border: 3px solid #dedede;
         border-right: 0;
-        font-size: calc(8px + 1vw);
     }
     .table-cell:nth-child(4) {
         border-right: 3px solid #dedede;
@@ -589,7 +538,7 @@ h3 {
 
     /* seção do rodapé */
     #logo-container {
-        display: inline-block !important;
+        display: inline-block;
         margin: 20px;
     }
 }
