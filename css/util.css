@@ -5,6 +5,7 @@ body {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .center { /* classe usada para centralizar elementos verticalmente */
     position: relative;
