@@ -1,0 +1,24 @@
+.table-cell h2 {
+    color: #F25022;
+    padding: 10px;
+}
+.table-cell {
+    border: 3px solid #dedede;
+    border-bottom: 0;
+    padding: 20px 24px 30px 24px;
+    margin: 0;
+}
+.table-cell:nth-child(4) {
+    border-bottom: 3px solid #dedede;
+}
+
+
+@media only screen and (min-width: 893px) {
+    .table-cell {
+        border: 3px solid #dedede;
+        border-right: 0;
+    }
+    .table-cell:nth-child(4) {
+        border-right: 3px solid #dedede;
+    }
+}

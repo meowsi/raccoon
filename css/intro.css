@@ -1,0 +1,78 @@
+#intro::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    background-image: url('../assets/img1.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    filter: brightness(70%);
+    background-size: auto;
+    background-position: center;
+    height: 820px;
+}
+#intro {
+    position: relative;
+    color: white;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+    height: 820px;
+}
+#intro-header {
+    font-size: calc(16px + 8vw);
+    font-weight: 600;
+    display: block;
+}
+#intro-header-subtitle {
+    font-size: calc(10px + 4vw);
+    display: block;
+}
+#intro .center {
+    left: 0 !important;
+    margin: 0 8%;
+    width: auto !important;
+}
+#dropdown {
+    margin: 0 10%;
+    display: flex;
+    position: absolute;
+    bottom: 4%;
+    width: 80%;
+    justify-content: center;
+}
+#intro-arrow {
+    display: none;
+}
+
+
+@media only screen and (min-width: 893px) {
+    #intro::before { /* necessário para que o filtro do background não incida sobre os demais elementos da div */
+        background-size: 100%;
+        height: calc(500px + 12vh);
+    }
+    #intro {
+        height: calc(500px + 12vh);
+        text-align: left;
+    }
+    #intro-main {
+        left: 8%;
+        width: 92%;
+    }
+    #intro-header {
+        font-size: 72px;
+    }
+    #intro-header-subtitle {
+        font-size: 30px;
+    }
+    #dropdown {
+        justify-content: space-between;
+    }
+    #intro-arrow {
+        display: flex;
+        filter: invert(100%);
+    }
+    #intro-arrow:hover { /* crédito: https://codepen.io/sosuke/pen/Pjoqqp */
+        filter: invert(16%) sepia(96%) saturate(1956%) hue-rotate(206deg) brightness(91%) contrast(80%);
+    }
+}

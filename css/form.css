@@ -1,0 +1,51 @@
+form {
+    background-color: #e6e6e6;
+    max-width: 400px;
+    padding: 2% 3%;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+}
+input {
+    display: block;
+    color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0;
+    width: auto;
+    margin: 5px 0 5% 0;
+    padding: 0 0 0 5%;
+    height: 40px;
+}
+label {
+    font-size: calc(8px + 1vw);
+    text-align: left;
+    margin-top: 8px;
+}
+input:focus {
+    outline: 2px solid #6b9ecb;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper label {
+    order: 1; /* ordem necessária p/ usar o selector + sem prejudicar o layout */
+}
+.input-wrapper input {
+    order: 2;
+}
+.input-wrapper input:focus + label {
+    color: #6b9ecb;
+}
+
+
+@media only screen and (min-width: 893px) {
+    input {
+        margin: 5px 0 10px 0;
+    }
+    label {
+        font-size: 14px;
+        text-align: left;
+    }
+}

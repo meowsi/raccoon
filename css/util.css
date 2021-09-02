@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI';
+    margin: 0;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center { /* classe usada para centralizar elementos verticalmente */
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/* botões diversos */
+#button {
+    background-color: #002050;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: calc(8px + 2vw);
+    font-weight: 600;
+    margin: 0;
+}
+#button2 {
+    background-color: #00a4ef;
+    border: none;
+    color: white;
+    text-decoration: none !important;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0;
+    font-size: calc(10px + 3vw);
+    padding: 4% 10%;
+}
+#button3 {
+    padding: 5px 5px;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    font-size: calc(6px + 2vw);
+    font-weight: 600;
+}
+#button4 {
+    width: 100%;
+    color: white;
+    background-color: #00a4ef;
+    text-decoration: none !important;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 4% 0 3% 0;
+    display: inline-block;
+    text-align: center;
+    font-size: calc(15px + 2vw);
+    padding: 3.5% 0;
+}
+#button:hover, #button2:hover, #button4:hover {
+    background-color: #1d498b !important;
+}
+.green {
+    border: 1px solid #7FBA00;
+    color: #7FBA00;
+}
+.green:hover {
+    background-color: #7FBA00;
+    color: white;
+}
+.blue {
+    border: 1px solid #00a4ef;
+    color: #00a4ef;
+}
+.blue:hover {
+    background-color: #00a4ef;
+    color: white;
+}
+.orange {
+    border: 1px solid #ffb900;
+    color: #ffb900;
+}
+.orange:hover {
+    background-color: #ffb900;
+    color: white;
+}
+.header-button {
+    color: white;
+    font-size: 15px;
+    margin: 0 5%;
+    position: relative;
+    float: right;
+}
+
+
+/* conteúdo */
+.content {
+    font-size: calc(12px + 0.4vw);
+    font-weight: normal;
+    text-align: center;
+    color: rgb(133, 133, 133);
+    margin: 5% 5%;
+}
+section {
+    font-size: calc(12px + 0.4vw);
+    font-weight: normal;
+    text-align: center;
+    color: rgb(133, 133, 133);
+    margin: 5% 5%;
+}
+
+
+/*  headers */
+h1 {
+    font-size: calc(12px + 2vw);
+    color: #2772b7;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}
+h2 {
+    font-size: calc(14px + 0.5vw);
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+#red-text {
+    color: #F25022;
+    font-weight: 600;
+}
+
+
+/* layout desktop */
+@media only screen and (min-width: 893px) {
+    .flex-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    /* botões usados no layout */
+    #button {
+        font-size: 16px;
+    }
+    #button2 {
+        padding: 14px 45px;
+        font-size: 25px;
+    }
+    #button3 {
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .green {
+        border: 2px solid #7FBA00;
+    }
+    .blue {
+        border: 2px solid #00a4ef;
+    }
+    .orange {
+        border: 2px solid #ffb900;
+    }
+    #button4 {
+        padding: 12px 0 12px 0;
+        font-size: 26px;
+    }  
+}

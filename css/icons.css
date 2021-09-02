@@ -1,0 +1,79 @@
+.container {
+    color: #737373;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: auto;
+    text-align: left;
+    border-bottom: 3px solid #dedede;
+    padding: 0;
+}
+.container:nth-child(3) {
+    border-bottom: 0;
+}
+.icons {
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12px;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+}
+.support {
+    background-color: #7fba00;
+    background-image: url('../assets/maos.png');
+    background-size: 80%;
+}
+.shield {
+    background-color: #00a4ef;
+    background-image: url('../assets/shield.png');
+    background-size: 70%;
+}
+.notebook {
+    background-color: #ffb900;
+    background-image: url('../assets/notebook.png');
+    background-size: 75%;
+}
+.first-child h2 {
+    color: #7fba00;
+}
+.second-child h2 {
+    color: #00a4ef;
+}
+.third-child h2 {
+    color: #ffb900;
+}
+.separator {
+    display: none;
+}
+
+
+@media only screen and (min-width: 893px) {
+    .container {
+        width: 285px;
+        text-align: center;
+    }
+    .separator { /* esta classe é ocultada na versão mobile */
+        border-bottom: 4px solid #dedede;
+        width: 45px;
+        height: 15px;
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+    .container {
+        flex-direction: column;
+        border-bottom: 0;
+    }
+    .icons {
+        border-radius: 100px;
+        margin-bottom: 20px;
+        padding: 20px;
+        height: 160px;
+        width: 160px;
+    }
+}

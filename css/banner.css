@@ -1,0 +1,38 @@
+.banner::before { /* mesma lógica da seção intro */
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../assets/banner.png");
+    filter: brightness(40%);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    z-index: -1;
+}
+.banner {
+    position: relative;
+    height: 280px;
+    z-index: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    font-size: calc(10px + 5vw);
+}
+.banner::before, .banner {
+    height: calc(200px + 30vw);
+}
+
+
+@media only screen and (min-width: 893px) {
+    .banner::before {
+        background-size: 100%;
+        width: 100%;
+        height: 280px;
+    }
+    .banner {
+        height: 280px;
+        font-size: 40px;
+    }
+}
