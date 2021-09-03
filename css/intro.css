@@ -9,7 +9,7 @@
     filter: brightness(70%);
     background-size: auto;
     background-position: center;
-    height: 820px;
+    height: 700px;
 }
 #intro {
     position: relative;
@@ -17,7 +17,7 @@
     z-index: 0;
     width: 100%;
     text-align: center;
-    height: 820px;
+    height: 700px;
 }
 #intro-header {
     font-size: calc(16px + 8vw);
